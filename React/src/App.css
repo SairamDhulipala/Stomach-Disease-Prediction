@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling */
+  background: #3399ff;
+}
+
+.App {
+  text-align: center;
+}
+
+.container {
+  position: absolute; /* Change from 'absolute' to 'relative' */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  padding-left: 900px; /* Check if this value is aligned properly */
+  z-index: 1; /* Add this line */
+}
+
+
+.header-text {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 20px;
+  margin-left: 70px;
+}
+
+
+button{
+  margin-left: 80px;
+  padding: 25px 30px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  border-radius: 100px;
+  word-spacing: 7px;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+button:hover{
+    background: #ffffff;
+    color: #000000;
+    text-shadow: 0px 0px 8px #000000;
+    box-shadow: 0 0 5px #ffffff,
+                0 0 25px #ffffff,
+                0 0 50px #ffffff,
+                0 0 200px #ffffff;
+  
+     transition: background-color 0.5s, color 0.5s, box-shadow 0.5s,text-shadow 0.5s;
+
+}
+.ripple-background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 1px 0px #508fb9;
+}
+
+.small {
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  bottom: -100px;
+}
+
+.medium {
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  bottom: -200px;
+}
+
+.large {
+  width: 600px;
+  height: 600px;
+  left: -300px;
+  bottom: -300px;
+}
+
+.xlarge {
+  width: 800px;
+  height: 800px;
+  left: -400px;
+  bottom: -400px;
+}
+
+.xxlarge {
+  width: 1000px;
+  height: 1000px;
+  left: -500px;
+  bottom: -500px;
+}
+
+.shade1 {
+  opacity: 0.2;
+}
+
+.shade2 {
+  opacity: 0.5;
+}
+
+.shade3 {
+  opacity: 0.7;
+}
+
+.shade4 {
+  opacity: 0.8;
+}
+
+.shade5 {
+  opacity: 0.9;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.question {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.question.active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+/* App.css */
+
+/* ... (previous styles remain unchanged) */
+
+.answer-buttons {
+  position: fixed;
+  left: 60%;
+  bottom: 320px; /* Adjust the distance from the bottom */
+  width: 300px; /* Set a fixed width for the buttons container */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button-container button {
+  padding: 15px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  border-radius: 100px;
+  word-spacing: 7px;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+}
